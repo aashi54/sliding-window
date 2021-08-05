@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int size = 5;
+    int arr[5] = {-8, 2, 3, -6, 10};
+    int k =2;
+    
+    int i=0, j=0;
+    list<int> l;
+    vector<int> ans;
+   
+    while(j<size){
+        
+         if(arr[j]<0){
+             l.push_back(arr[j]);
+             
+         }
+        
+         if(j-i+1<k){
+             j++;
+         }
+        
+         else if(j-i+1 == k){
+             ans.push_back(l.front());
+             l.pop_front();
+             i++;
+             j++;
+             
+             
+     }
+        
+    }  
+    return 0;
+}
