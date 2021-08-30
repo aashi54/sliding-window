@@ -23,7 +23,7 @@ int main()
        if(j-i+1 < k)
          j++;
          
-         if(j-i+1 ==k){
+        else if(j-i+1 ==k){
            ans.push_back(l.front());
               
               if(l.front()==arr[i])
