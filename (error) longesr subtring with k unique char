@@ -1,0 +1,42 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    string s = "aabagcbebebe";
+    int k =3;
+    int size = s.size();
+   int ans = INT_MIN;
+   
+   int i=0, j=0;
+   unordered_map<char,int> mp;
+   while(j<size){
+       mp[s[j]]++;
+       
+         if(mp.size()<k)
+          j++;
+          
+         else if(mp.size()==k){
+             ans = max(ans,(j-i+1));
+               j++;
+         }
+         else if(mp.size()>k){
+             while(mp.size()>k){
+                mp[s[i]]--;
+                if(mp[s[i]]==0)
+                  mp.erase(s[j]);
+                i++;
+                j++;
+             }
+             
+         } 
+    
+       
+       
+   }
+     cout<<ans<<endl;
+    return 0;
+}
+
+////////////////////
+running nonly for starting string if answer is present in back witl not give correct ans
