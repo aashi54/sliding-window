@@ -39,4 +39,4 @@ int main()
 }
 
 ////////////////////
-running nonly for starting string if answer is present in back witl not give correct ans
+running nonly for starting string if answer is present in back witl not give correct ans //segmentation fault
