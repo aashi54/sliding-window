@@ -24,7 +24,7 @@ int main()
              while(mp.size()>k){
                 mp[s[i]]--;
                 if(mp[s[i]]==0)
-                  mp.erase(s[j]);
+                  mp.erase(s[i]);
                 i++;
                 j++;
              }
@@ -38,5 +38,4 @@ int main()
     return 0;
 }
 
-////////////////////
-running nonly for starting string if answer is present in back witl not give correct ans //segmentation fault
+
